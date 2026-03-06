@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cálculos Geométricos</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>CALCULOS DE AREA, PERIMETRO Y VOLUMEN</h1>
+
+    <h1>Figuras Geometricas Planas</h1>
+    <h2>Area y Perimetro</h2>
+    
+    <div class="grid-container">
+        
+        <section class="card">
+            <div class="shape square"></div>
+            <h2>Cuadrado</h2>
+            <label class="sr-only" >Lado: <input type="number" placeholder="Ingrese un valor" required id="ladoCuadrado" step="0.01"></label>
+            <button onclick="calcularCuadrado()">Calcular</button>
+            <p>Área: <span id="areaCuadrado"></span></p>
+            <p>Perímetro: <span id="perimetroCuadrado"></span></p>
+        </section>
+
+        <section class="card">
+            <div class="shape rectangle"></div>
+            <h2>Rectángulo</h2>
+            <label class="sr-only" >Largo: <input type="number" placeholder="Ingrese un valor" required id="largoRectangulo" step="0.01"></label>
+            <label class="sr-only">Ancho: <input type="number" placeholder="Ingrese un valor" required id="anchoRectangulo" step="0.01"></label>
+            <button onclick="calcularRectangulo()">Calcular</button>
+            <p>Área: <span id="areaRectangulo"></span></p>
+            <p>Perímetro: <span id="perimetroRectangulo"></span></p>
+        </section>
+
+        <section class="card">
+            <div class="shape circle"></div>
+            <h2>Círculo</h2>
+            <label class="sr-only" >Radio: <input type="number" placeholder="Ingrese un valor" required id="radioCirculo" step="0.01"></label>
+            <button onclick="calcularCirculo()">Calcular</button>
+            <p>Área: <span id="areaCirculo"></span></p>
+            <p>Perímetro: <span id="perimetroCirculo"></span></p>
+        </section>
+            
+        <section class="card">
+            <div class="shape triangle"></div>
+            <h2>Triángulo</h2>
+            <label class="sr-only">Base:<input type="number" placeholder="Ingrese un valor" required id="baseTriangulo" step="0.01"> </label>
+            <label class="sr-only">Altura:<input type="number" placeholder="Ingrese un valor" required id="alturaTriangulo" step="0.01"> </label>            
+            <label class="sr-only">Lado 1:<input type="number" placeholder="Ingrese un valor" required id="lado1Triangulo" step="0.01"> </label>        
+            <label class="sr-only">Lado 2:<input type="number" placeholder="Ingrese un valor" required id="lado2Triangulo" step="0.01"> </label>    
+            <label class="sr-only">Lado 3:<input type="number" placeholder="Ingrese un valor" required id="lado3Triangulo" step="0.01"> </label>
+            <button onclick="calcularTriangulo()">Calcular</button>    
+            <p>Área: <span id="areaTriangulo"></span></p>
+            <p>Perímetro: <span id="perimetroTriangulo"></span></p>
+        </section>
+
+        <section class="card">
+            <div class="shape rhombus"></div>
+            <h2>Rombo</h2>
+            <label class="sr-only">Lado: <input type="number" placeholder="Ingrese un valor" required id="ladoRombo" step="0.01"></label>
+            <label class="sr-only">Diagonal Mayor: <input type="number" placeholder="Ingrese un valor" required id="diagonalmRombo" step="0.01"> </label>
+            <label class="sr-only">Diagonal Menor: <input type="number" placeholder="Ingrese un valor" required id="diagonalnRombo" step="0.01"></label>           
+            <button onclick="calcularRombo()">Calcular</button>
+            <p>Área: <span id="areaRombo"></span></p>
+            <p>Perímetro: <span id="perimetroRombo"></span></p>
+        </section>
+
+        <section class="card">
+            <div class="shape pentagon"></div>
+            <h2>Pentagono</h2>
+            <label class="sr-only">Lado: <input type="number" placeholder="Ingrese un valor" required id="ladoPentagono" step="0.01"></label>
+            <label class="sr-only">Apotema: <input type="number" placeholder="Ingrese un valor" required id="apotemaPentagono" step="0.01"> </label>
+            <button onclick="calcularPentagono()">Calcular</button>
+            <p>Área: <span id="areaPentagono"></span></p>
+            <p>Perímetro: <span id="perimetroPentagono"></span></p>
+        </section>
+
+        <section class="card">
+            <div class="shape hexagon"></div>
+            <h2>Hexagono</h2>
+            <label class="sr-only">Lado: <input type="number" placeholder="Ingrese un valor" required id="ladoHexagono" step="0.01"></label>
+            <label class="sr-only">Apotema: <input type="number" placeholder="Ingrese un valor" required id="apotemaHexagono" step="0.01"> </label>
+            <button onclick="calcularHexagono()">Calcular</button>
+            <p>Área: <span id="areaHexagono"></span></p>
+            <p>Perímetro: <span id="perimetroHexagono"></span></p>
+        </section>
+
+        <section class="card">
+            <div class="shape trapezoid"></div>
+            <h2>Trapecio</h2>
+            <label class="sr-only">Base Mayor:<input type="number" placeholder="Ingrese un valor" required id="basemTrapecio" step="0.01"> </label>
+            <label class="sr-only">Base Menor:<input type="number" placeholder="Ingrese un valor" required id="basenTrapecio" step="0.01"> </label>
+            <label class="sr-only">Altura:<input type="number" placeholder="Ingrese un valor" required id="alturaTrapecio" step="0.01"> </label>            
+            <label class="sr-only">Lado Inclinado:<input type="number" placeholder="Ingrese un valor" required id="ladoiTrapecio" step="0.01"> </label>        
+            <button onclick="calcularTrapecio()">Calcular</button>
+            <p>Área: <span id="areaTrapecio"></span></p>
+            <p>Perímetro: <span id="perimetroTrapecio"></span></p>
+        </section>
+
+        <section class="card">
+            <div class="shape parallelogram"></div>
+            <h2>Paralelogramo</h2>
+            <label class="sr-only">Base: <input type="number" placeholder="Ingrese un valor" required id="baseParalelogramo" step="0.01"></label>
+            <label class="sr-only">Altura: <input type="number" placeholder="Ingrese un valor" required id="alturaParalelogramo" step="0.01"> </label>
+            <label class="sr-only">Lado Inclinado:<input type="number" placeholder="Ingrese un valor" required id="ladoiParalelogramo" step="0.01"> </label>        
+            <button onclick="calcularParalelogramo()">Calcular</button>
+            <p>Área: <span id="areaParalelogramo"></span></p>
+            <p>Perímetro: <span id="perimetroParalelogramo"></span></p>
+        </section>
+
+    </div>
+    
+    <h1>Figuras Geometricas Tridimensionales</h1>
+    <h2>Area y Volumen</h2>
+
+    <div class="grid-container">
+        
+        <section class="card">
+            <div class="shape cube"></div>
+            <h2>Cubo</h2>
+            <label class="sr-only" >Lado: <input type="number" placeholder="Ingrese un valor" required id="ladoCubo" step="0.01"></label>
+            <button onclick="calcularCubo()">Calcular</button>
+            <p>Área: <span id="areaCubo"></span></p>
+            <p>Volumen: <span id="volumenCubo"></span></p>
+        </section>
+
+        <section class="card">
+            <div class="shape prism"></div>
+            <h2>Prisma</h2>
+            <label class="sr-only" >Largo: <input type="number" placeholder="Ingrese un valor" required id="largoPrisma" step="0.01"></label>
+            <label class="sr-only" >Ancho: <input type="number" placeholder="Ingrese un valor" required id="anchoPrisma" step="0.01"></label>
+            <label class="sr-only" >Altura: <input type="number" placeholder="Ingrese un valor" required id="alturaPrisma" step="0.01"></label>
+            <button onclick="calcularPrisma()">Calcular</button>
+            <p>Área: <span id="areaPrisma"></span></p>
+            <p>Volumen: <span id="volumenPrisma"></span></p>
+        </section>
+
+        <section class="card">
+            <div class="shape pyramid"></div>
+            <h2>Piramide</h2>
+            <label class="sr-only" >Base: <input type="number" placeholder="Ingrese un valor" required id="basePiramide" step="0.01"></label>
+            <label class="sr-only" >Altura: <input type="number" placeholder="Ingrese un valor" required id="alturaPiramide" step="0.01"></label>
+            <button onclick="calcularPiramide()">Calcular</button>
+            <p>Área: <span id="areaPiramide"></span></p>
+            <p>Volumen: <span id="volumenPiramide"></span></p>
+        </section>
+
+        <section class="card">
+            <div class="shape cylinder"></div>
+            <h2>Cilindro</h2>
+            <label class="sr-only" >Radio: <input type="number" placeholder="Ingrese un valor" required id="radioCilindro" step="0.01"></label>
+            <label class="sr-only" >Altura: <input type="number" placeholder="Ingrese un valor" required id="alturaCilindro" step="0.01"></label>
+            <button onclick="calcularCilindro()">Calcular</button>
+            <p>Área: <span id="areaCilindro"></span></p>
+            <p>Volumen: <span id="volumenCilindro"></span></p>
+        </section>
+
+        <section class="card">
+            <div class="shape cone"></div>
+            <h2>Cono</h2>
+            <label class="sr-only" >Radio: <input type="number" placeholder="Ingrese un valor" required id="radioCono" step="0.01"></label>
+            <label class="sr-only" >Altura: <input type="number" placeholder="Ingrese un valor" required id="alturaCono" step="0.01"></label>
+            <button onclick="calcularCono()">Calcular</button>
+            <p>Área: <span id="areaCono"></span></p>
+            <p>Volumen: <span id="volumenCono"></span></p>
+        </section>
+
+        <section class="card">
+            <div class="shape sphere"></div>
+            <h2>Esfera</h2>
+            <label class="sr-only" >Radio: <input type="number" placeholder="Ingrese un valor" required id="radioEsfera" step="0.01"></label>
+            <button onclick="calcularEsfera()">Calcular</button>
+            <p>Área: <span id="areaEsfera"></span></p>
+            <p>Volumen: <span id="volumenEsfera"></span></p>
+        </section>
+
+    </div>
+
+<script src="calculadora.js"></script>
+</body>
+</html>
